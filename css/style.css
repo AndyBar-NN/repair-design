@@ -326,7 +326,7 @@ template {
   align-items: center; }
 
 .logo {
-  background-color: #E3B873;
+  color: #E3B873;
   text-transform: uppercase; }
 
 .nav__item {
