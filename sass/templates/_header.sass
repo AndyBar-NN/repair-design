@@ -15,10 +15,14 @@
   text-transform: uppercase
 .nav
   &__item
-    color: $light
-    text-decoration: none
-    text-transform: uppercase
-    margin-right: 40px
+    &
+      color: $light
+      text-decoration: none
+      text-transform: uppercase
+      margin-right: 40px
+      transition: color 0.2s
+    &:hover
+      color: $primary
 .phone
   color: $primary
 .contacts
