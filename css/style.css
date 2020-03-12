@@ -342,6 +342,55 @@ template {
   background-color: transparent;
   color: #fff; }
 
+.label {
+  font-size: 1.07rem; }
+
+.label--light {
+  color: rgba(255, 255, 255, 0.5); }
+
+.input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+  font-size: 1.285rem;
+  color: #fff;
+  padding: 0.5rem; }
+
+.input::-webkit-input-placeholder {
+  color: #fff; }
+
+.input::-moz-placeholder {
+  color: #fff; }
+
+.input:-ms-input-placeholder {
+  color: #fff; }
+
+.input::-ms-input-placeholder {
+  color: #fff; }
+
+.input::placeholder {
+  color: #fff; }
+
+.policy__checkbox {
+  opacity: 0;
+  visibility: hidden; }
+
+.policy::before {
+  background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
+
+.policy__lable {
+  display: flex;
+  align-items: center; }
+
+.policy::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border: 1px solid #E3B873;
+  border-radius: 1px;
+  cursor: pointer;
+  margin-right: 0.64rem; }
+
 .container {
   width: 85%;
   max-width: 1256px;
@@ -564,43 +613,110 @@ img {
 
 .design {
   position: relative; }
-  .design::before {
-    content: '';
-    position: absolute;
-    top: 52%;
-    left: 0;
-    height: 50%;
-    width: 100%;
-    background: #131313; }
-  .design__section-title {
-    margin-top: 8rem; }
-  .design__section-description {
-    font-size: 1.42rem;
-    line-height: 1.92rem;
-    text-align: center;
-    max-width: 741px;
-    margin: auto;
-    padding: 15px 0 49px 0; }
-  .design__pricetag {
-    position: absolute;
-    left: 0;
-    bottom: -1.79rem;
-    text-transform: uppercase;
-    font-size: 1.29rem;
-    font-family: 'Yeseva One', cursive;
-    background-color: #E3B873;
-    color: #fff;
-    padding: 1.214rem 6.1rem 1.214rem 2rem; }
-  .design__card {
-    position: relative; }
-    .design__card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      max-width: 100%;
-      max-height: 100%;
-      background-color: rgba(0, 0, 0, 0.3); }
+
+.design::before {
+  content: '';
+  position: absolute;
+  top: 52%;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  background: #131313; }
+
+.design__section-title {
+  margin-top: 8rem; }
+
+.design__section-description {
+  font-size: 1.42rem;
+  line-height: 1.92rem;
+  text-align: center;
+  max-width: 741px;
+  margin: auto;
+  padding: 15px 0 49px 0; }
+
+.design__pricetag {
+  position: absolute;
+  left: 0;
+  bottom: -1.79rem;
+  text-transform: uppercase;
+  font-size: 1.29rem;
+  font-family: 'Yeseva One', cursive;
+  background-color: #E3B873;
+  color: #fff;
+  padding: 1.214rem 6.1rem 1.214rem 2rem; }
+
+.design__card {
+  position: relative; }
+
+.design__card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.modal--visible {
+  opacity: 1;
+  visibility: visible; }
+
+.modal__dialog {
+  position: relative;
+  max-width: 36.36rem;
+  background: #131313 url("../img/bg-lines.svg") no-repeat center;
+  padding: 2.357rem 3.5rem 1.928rem;
+  color: #fff; }
+
+.modal__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  background: transparent url("../img/x-circle.svg") no-repeat center;
+  border: none;
+  margin: 12px;
+  cursor: pointer; }
+
+.modal__title {
+  font-family: 'Yeseva One', cursive;
+  font-size: 1.357rem;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 2.428rem; }
+
+.modal__form {
+  display: flex;
+  flex-direction: column; }
+
+.modal__input {
+  margin-bottom: 3.428rem; }
+
+.modal__input:last-of-type {
+  margin-bottom: 1rem; }
+
+.modal__policy {
+  margin-bottom: 2.7rem; }
+
+.modal__button {
+  align-self: flex-end; }
 
 @media screen and (max-width: 1300px) {
   html {

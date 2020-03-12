@@ -1,14 +1,14 @@
 .design
-  position: relative
   &
-    &::before
-      content: ''
-      position: absolute
-      top: 52%
-      left: 0
-      height: 50%
-      width: 100%
-      background: $dark
+    position: relative
+  &::before
+    content: ''
+    position: absolute
+    top: 52%
+    left: 0
+    height: 50%
+    width: 100%
+    background: $dark
   &__section-title
     margin-top: 8rem
   &__section-description
@@ -29,7 +29,8 @@
     color: $light
     padding: 1.214rem 6.1rem 1.214rem 2rem
   &__card
-    position: relative
+    &
+      position: relative
     &::before
       content: ''
       position: absolute
