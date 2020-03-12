@@ -353,7 +353,7 @@ template {
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-size: 1.285rem;
   color: #fff;
-  padding: 0.5rem; }
+  padding: 0.5rem 0; }
 
 .input::-webkit-input-placeholder {
   color: #fff; }
