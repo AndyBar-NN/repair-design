@@ -344,9 +344,8 @@ template {
 
 .label {
   font-size: 1.07rem; }
-
-.label--light {
-  color: rgba(255, 255, 255, 0.5); }
+  .label--light {
+    color: rgba(255, 255, 255, 0.5); }
 
 .input {
   background-color: transparent;
@@ -374,15 +373,14 @@ template {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-
-.policy::before {
-  background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
+  .policy__checkbox:checked + .policy__lable::before {
+    background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
 
 .policy__lable {
   display: flex;
   align-items: center; }
 
-.policy::before {
+.policy__lable::before {
   content: '';
   width: 18px;
   height: 18px;
