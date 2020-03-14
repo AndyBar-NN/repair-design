@@ -359,8 +359,9 @@ template {
 
 .label {
   font-size: 1.07rem; }
-  .label--light {
-    color: rgba(255, 255, 255, 0.5); }
+
+.label--light {
+  color: rgba(255, 255, 255, 0.5); }
 
 .input {
   background-color: transparent;
@@ -388,8 +389,9 @@ template {
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-  .policy__checkbox:checked + .policy__lable::before {
-    background: #E3B873 url("../img/check.svg") no-repeat center/0.8rem; }
+
+.policy__checkbox:checked + .policy__lable::before {
+  background: #E3B873 url("../img/icons/check.svg") no-repeat center/0.8rem; }
 
 .policy__lable {
   display: flex;
@@ -409,6 +411,20 @@ template {
   max-width: 1256px;
   margin: auto; }
 
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col-30 {
+  flex-basis: 32%; }
+
+.col-35 {
+  width: 35%; }
+
+.col-55 {
+  width: 55%; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -422,10 +438,45 @@ body {
 img {
   max-width: 100%; }
 
+.section--dark {
+  padding-top: 9.14rem;
+  background-color: #131313;
+  color: #fff; }
+
 .section-title {
-  text-align: center;
+  margin: 0;
+  text-align: center; }
+
+.section-title--left {
+  text-align: left; }
+
+.section-title__heading {
+  margin: 0;
+  font-size: 25px;
+  line-height: 138%;
   text-transform: uppercase;
-  font-family: 'Yeseva One', sans-serif; }
+  font-family: 'Yeseva One', cursive; }
+
+.section-title__heading--primary {
+  color: #E3B873; }
+
+.section-title__word {
+  display: flex;
+  align-items: center; }
+
+.section-title__word::after {
+  content: '';
+  width: 90px;
+  height: 1px;
+  background-color: #E3B873;
+  margin-left: 2.3rem; }
+
+.section-title__text {
+  font-size: 1.28rem;
+  line-height: 2.07rem;
+  max-width: 31.57rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
 
 .section-title__image {
   display: flex;
@@ -494,6 +545,16 @@ img {
   height: 100%;
   background: rgba(19, 19, 19, 0.7); }
 
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 3.46rem;
+  background: #131313; }
+
 .hero__content {
   position: relative;
   max-width: 47.85rem;
@@ -526,6 +587,7 @@ img {
   line-height: 138.6%;
   font-family: 'Yeseva One', sans-serif;
   position: absolute;
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -540,7 +602,7 @@ img {
 
 .hero__scroll-down::after {
   content: '';
-  background: url("../img/arrow-down.svg") no-repeat center;
+  background: url("../img/icons/arrow-down.svg") no-repeat center;
   width: 30px;
   height: 30px;
   border: 2px solid #E3B873;
@@ -579,16 +641,55 @@ img {
 .title--primary {
   color: #E3B873; }
 
+.swiper-slide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; }
+
+.swiper-slide__text {
+  flex-basis: 43%;
+  margin-bottom: 4.5rem; }
+
+.swiper-slide__heading {
+  font-size: 1.285rem;
+  line-height: 1.78rem;
+  font-family: 'Yeseva One', cursive;
+  color: #E3B873;
+  text-transform: uppercase;
+  margin-bottom: 0.64rem; }
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.3); }
+
+.swiper-pagination-active {
+  background-color: #fff; }
+
+.swiper-button-prev, .swiper-button-next {
+  bottom: 0;
+  top: auto;
+  background-size: 42px;
+  width: 42px;
+  height: 14px; }
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  display: none; }
+
+.swiper-button-prev {
+  left: 0;
+  background: url("../img/left.svg") no-repeat center; }
+
+.swiper-button-next {
+  background: url("../img/right.svg") no-repeat center; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  width: auto;
+  bottom: 0; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 9px; }
+
 .types__section-title {
   margin-bottom: 2rem; }
-
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
-
-.col {
-  flex-basis: 32%; }
 
 .card__text {
   position: relative;
@@ -693,7 +794,7 @@ img {
 .modal__dialog {
   position: relative;
   max-width: 36.36rem;
-  background: #131313 url("../img/bg-lines.svg") no-repeat center;
+  background: #131313 url("../img/modal/bg-lines.svg") no-repeat center;
   padding: 2.357rem 3.5rem 1.928rem;
   color: #fff; }
 
@@ -703,7 +804,7 @@ img {
   top: 0;
   width: 28px;
   height: 28px;
-  background: transparent url("../img/x-circle.svg") no-repeat center;
+  background: transparent url("../img/modal/x-circle.svg") no-repeat center;
   border: none;
   margin: 12px;
   cursor: pointer; }
