@@ -1,7 +1,7 @@
 $(document).ready(function (){
   var modal = $('.modal'),
-      modalBtn = $('[data-toggle=modal]'),
-      closeBtn = $('.modal__close');
+  modalBtn = $('[data-toggle=modal]'),
+  closeBtn = $('.modal__close');
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
   });
@@ -44,4 +44,36 @@ $(function(){
   bullets.css('left', prev.width() + 20)
 
   new WOW().init();
+
+  // validation
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя не короче двух букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+    }
+  });
+
+  // mask phone
+  $('[type=tel]').mask('+7(000)000-00-00', {placeholder: "+7(___)___-__-__"});
 });
