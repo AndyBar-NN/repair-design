@@ -515,13 +515,21 @@
           <label for="policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
-        <button class="button button--primary modal__button">Отправить заявку</button>
+        <button class="button button--primary modal__button" data-toggle="feedback">Отправить заявку</button>
       </form>
       <!-- /.form modal__form -->
     </div>
     <!-- /.modal__dialog -->
   </div>
   <!-- /.modal -->
+  <div class="feedback">
+    <div class="feedback__dialog">
+      <button class="feedback__close"></button>
+      <h3 class="feedback__title">Заявка отправлена. Менеджер свяжется с вами через 15 минут.</h3>
+    </div>
+    <!-- /.feedback__dialog -->
+  </div>
+  <!-- /.feedback -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
   <script src="js/wow.min.js"></script>

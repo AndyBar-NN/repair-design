@@ -10,6 +10,19 @@ $(document).ready(function (){
   });
 });
 
+$(document).ready(function (){
+  var feedback = $('.feedback'),
+  feedbackBtn = $('[data-toggle=feedback]'),
+  closeBtn = $('.feedback__close');
+  feedbackBtn.on('click', function () {
+    feedback.toggleClass('feedback--visible');
+  });
+  closeBtn.on('click', function () {
+    feedback.toggleClass('feedback--visible');
+  });
+});
+
+// scroll down
 $(function(){
   $(window).scroll(function(){
     if($(window).scrollTop() > 100) {
@@ -24,31 +37,32 @@ $(function(){
     return false;
   });
 
-  var mySwiper = new Swiper ('.swiper-container', {
-    loop: true,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
+// swiper slide
+var mySwiper = new Swiper ('.swiper-container', {
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 
-  var next = $('.swiper-button-next');
-  var prev = $('.swiper-button-prev');
-  var bullets = $('.swiper-pagination');
+var next = $('.swiper-button-next');
+var prev = $('.swiper-button-prev');
+var bullets = $('.swiper-pagination');
 
-  next.css('left', prev.width() + 20 + bullets.width() + 20)
-  bullets.css('left', prev.width() + 20)
+next.css('left', prev.width() + 20 + bullets.width() + 20)
+bullets.css('left', prev.width() + 20)
 
-  new WOW().init();
+new WOW().init();
 
-  // validation
-  $('.modal__form').validate({
-    errorClass: "invalid",
-    rules: {
+// validation
+$('.modal__form').validate({
+  errorClass: "invalid",
+  rules: {
       // simple rule, converted to {required:true}
       userName: {
         required: true,
@@ -71,12 +85,27 @@ $(function(){
         required: "Заполните поле",
         email: "Введите корректный email"
       }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function(response) {
+          $('.feedback');
+          $(form)[0].reset();
+          $('.modal--visible').fadeOut();
+        },
+        error: function(response) {
+          console.error('Ошибка запроса' + response);
+        }
+      });
     }
   });
 
-  $('.control__form').validate({
-    errorClass: "invalid",
-    rules: {
+$('.control__form').validate({
+  errorClass: "invalid",
+  rules: {
       // simple rule, converted to {required:true}
       userName: {
         required: true,
@@ -94,9 +123,9 @@ $(function(){
     }
   });
 
-  $('.footer__form').validate({
-    errorClass: "invalid",
-    rules: {
+$('.footer__form').validate({
+  errorClass: "invalid",
+  rules: {
       // simple rule, converted to {required:true}
       userName: {
         required: true,
