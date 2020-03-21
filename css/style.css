@@ -865,6 +865,7 @@ img {
   padding-top: 3rem; }
 
 .footer__wrap {
+  position: relative;
   background-color: #181818;
   max-width: 63.07rem;
   margin: auto;

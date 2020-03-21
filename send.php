@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 $userName = $_POST['userName'];
 $userEmail = $_POST['userEmail'];
 $userPhone = $_POST['userPhone'];
@@ -15,7 +15,7 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 try {
     //Server settings
     $mail->CharSet = "UTF-8";
-    $mail->SMTPDebug = 2;                      // Enable verbose debug output
+    $mail->SMTPDebug = 0;                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -34,8 +34,7 @@ try {
     $mail->Body    = "Имя пользователя: ${userName}, Телефон: ${userPhone}, Почта: ${userEmail}, Вопрос: ${userQuestion}";
 
     $mail->send();
-    echo "<h1>Спасибо за заявку. Менеджер свяжется с вами в течение 15 минут</h1>";
+    header('location: thanks.html');
   } catch (Exception $e) {
     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }
-?>
