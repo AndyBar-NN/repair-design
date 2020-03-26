@@ -11,16 +11,16 @@ closeBtn.on('click', function () {
 });
 
 $(document).ready(function (){
-  var feedback = $('.feedback'),
-  feedbackBtn = $('[data-toggle=feedback]'),
-  closeBtn = $('.feedback__close');
-  feedbackBtn.on('click', function () {
-    feedback.toggleClass('feedback--visible');
-  });
-  closeBtn.on('click', function () {
-    feedback.toggleClass('feedback--visible');
-  });
-  });
+var feedback = $('.feedback'),
+feedbackBtn = $('[data-toggle=feedback]'),
+closeBtn = $('.feedback__close');
+feedbackBtn.on('click', function () {
+  feedback.toggleClass('feedback--visible');
+});
+closeBtn.on('click', function () {
+  feedback.toggleClass('feedback--visible');
+});
+});
 
 //Smooth Scrolling Using Navigation Menu
 $('a[href*="#"]').on('click', function(e){

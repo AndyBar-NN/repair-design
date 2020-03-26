@@ -413,7 +413,8 @@ template {
   margin-right: 0.64rem; }
 
 .policy__label--center {
-  justify-content: center; }
+  justify-content: center;
+  margin-right: 1rem; }
 
 label.invalid {
   position: absolute;
@@ -474,13 +475,24 @@ button {
 
 .section-title__heading {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: normal;
   line-height: 138%;
   text-transform: uppercase;
   font-family: 'Yeseva One', cursive; }
 
 .section-title__heading--primary {
+  color: #E3B873; }
+
+.section-title__headings {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: normal;
+  line-height: 138%;
+  text-transform: uppercase;
+  font-family: 'Yeseva One', cursive; }
+
+.section-title__headings--primary {
   color: #E3B873; }
 
 .section-title__word {
@@ -558,7 +570,6 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 90px;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   height: 100vh;
   color: #fff; }
@@ -670,7 +681,7 @@ button {
   color: #E3B873; }
 
 .projects {
-  padding-bottom: 30rem; }
+  padding-bottom: 29.6rem; }
 
 .swiper-slide {
   display: flex;
@@ -679,7 +690,11 @@ button {
 
 .swiper-slide__text {
   flex-basis: 43%;
-  margin-bottom: 4.5rem; }
+  margin-bottom: 1.8rem; }
+
+.swiper-slide__texts {
+  flex-basis: 43%;
+  margin-bottom: 7.3rem; }
 
 .swiper-slide__heading {
   font-size: 1.285rem;
@@ -722,7 +737,7 @@ button {
 
 .control__section-title {
   margin-bottom: 2.214rem;
-  margin-top: -24rem; }
+  margin-top: -23.5rem; }
 
 .control__video {
   position: relative;
@@ -744,7 +759,7 @@ button {
 .control__text {
   max-width: 40.785rem;
   margin: auto;
-  margin-bottom: 4.285rem;
+  margin-bottom: 4.7rem;
   text-align: center;
   font-size: 1.428rem;
   line-height: 2.42rem; }
@@ -753,7 +768,7 @@ button {
   content: '';
   display: block;
   margin: auto;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.1rem;
   width: 55px;
   height: 2px;
   background-color: #E3B873;
@@ -786,7 +801,8 @@ button {
 
 .control__policy-label {
   justify-content: center;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-right: 5rem; }
 
 .control__input {
   outline: none;
@@ -797,7 +813,7 @@ button {
   margin: auto; }
 
 .types__section-title {
-  margin-top: 10rem;
+  margin-top: 10.5rem;
   margin-bottom: 2rem; }
 
 .card__text {
@@ -838,7 +854,7 @@ button {
 
 .design {
   position: relative;
-  padding-bottom: 30rem; }
+  padding-bottom: 27rem; }
 
 .design::before {
   content: '';
@@ -850,7 +866,7 @@ button {
   /*background: $dark*/ }
 
 .design__section-title {
-  margin-top: 8rem; }
+  margin-top: 9.5rem; }
 
 .design__section-description {
   font-size: 1.42rem;
@@ -858,7 +874,7 @@ button {
   text-align: center;
   max-width: 741px;
   margin: auto;
-  padding: 15px 0 49px 0; }
+  padding: 19px 0 49px 0; }
 
 .design__pricetag {
   position: absolute;
@@ -1110,12 +1126,44 @@ button {
     margin-right: 1rem; } }
 
 @media screen and (max-width: 992px) {
+  .container {
+    width: 90%; }
   .nav {
     display: none; }
-  .hero__instagram {
+  .header {
+    padding: 21px 0; }
+  .logo {
+    font-size: 1rem; }
+  .button {
+    outline: none;
+    padding: 17px 24px; }
+  .hero__scroll-down {
     display: none; }
   .hero__content {
-    margin-left: 0; }
+    max-width: 22.86rem;
+    margin-left: 0;
+    margin-bottom: 5rem; }
+  .hero__text {
+    font-size: 1.29rem;
+    margin-bottom: 2.5rem;
+    line-height: 1.8rem; }
+  .hero__instagram {
+    display: none; }
+  .hero__button {
+    display: block;
+    max-width: 100%;
+    width: 26.55rem;
+    margin-bottom: 1.85rem; }
+  .section--dark {
+    padding-top: 0; }
+  .section-title__text {
+    font-size: 1rem; }
+  .section-title__heading {
+    font-size: 1.6rem; }
+  .section-title__headings {
+    font-size: 1.6rem; }
+  .section-title__word::after {
+    display: none; }
   .row {
     flex-direction: column;
     align-items: center; }
@@ -1127,46 +1175,27 @@ button {
   .col-55 {
     margin-top: 3rem;
     min-width: 100%; }
-  .contacts__phone {
-    margin-right: 0;
-    color: #fff;
-    text-decoration: none; }
-  .contacts__phone--footer {
-    color: #E3B873; }
-  .contacts__button {
-    display: none; }
-  .title {
-    font-size: 1.64rem; }
-  .hero__scroll-down {
-    display: none; }
-  .hero__content {
-    max-width: 22.86rem; }
-  .hero__text {
-    font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
-  .hero__button {
-    display: block;
-    max-width: 100%;
-    width: 26.55rem;
-    margin-bottom: 1.85rem; }
-  .section--dark {
-    padding-top: 0; }
-  .types__card {
-    margin-bottom: 5rem; }
-  .types__section-title {
-    margin-top: 4.14rem; }
-  .card__text {
-    margin-left: 0; }
-  .video__play {
-    width: 7rem; }
+  .swiper-slide__heading {
+    font-size: 1rem; }
+  .swiper-slide__text {
+    margin-bottom: 1.5rem; }
+  .swiper-slide__texts {
+    margin-bottom: 4.3rem; }
+  .projects {
+    padding-bottom: 27.4rem; }
   .control__text {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    line-height: 2rem; }
+  .control__text::before {
+    margin-bottom: 1rem; }
   .control__video {
-    min-height: 20rem; }
+    min-height: 20rem;
+    margin-bottom: 2rem; }
   .control__form {
     flex-direction: column; }
   .control__label {
-    margin-top: 5rem; }
+    margin-top: 4.5rem; }
   .control__input {
     margin-top: 0.4rem; }
   .control__button {
@@ -1177,8 +1206,29 @@ button {
     order: 1; }
   .control__policy-label {
     justify-content: flex-start; }
+  .contacts__phone {
+    margin-right: 0;
+    color: #fff;
+    text-decoration: none; }
+  .contacts__phone--footer {
+    color: #E3B873; }
+  .contacts__button {
+    display: none; }
+  .title {
+    font-size: 1.64rem; }
+  .types__card {
+    margin-bottom: 5rem; }
+  .types__section-title {
+    margin-top: 4.14rem; }
+  .card__text {
+    margin-left: 0; }
+  .video__play {
+    width: 7rem; }
   .design {
     padding-bottom: 21rem; }
+  .design__section-description {
+    font-size: 1rem;
+    padding-bottom: 32px; }
   .design__section-title {
     margin-top: 1rem; }
   .footer__menu {
@@ -1194,9 +1244,13 @@ button {
     margin-bottom: 5rem; }
   .footer__button {
     min-width: 100%; }
+  .footer__wrap {
+    margin-bottom: 0.714rem; }
   .footer__container {
     display: flex;
     flex-direction: column-reverse; }
+  .footer__contacts {
+    margin-top: -2rem; }
   .footer__contacts--title {
     max-width: 25rem; }
   .footer__map {
