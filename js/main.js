@@ -22,8 +22,16 @@ $(document).ready(function (){
   });
   });
 
+//Smooth Scrolling Using Navigation Menu
+$('a[href*="#"]').on('click', function(e){
+  $('html,body').animate({
+    scrollTop: $($(this).attr('href')).offset().top - 100
+  },500);
+  e.preventDefault();
+});
+
 // scroll down
-$(function(){
+/*$(function(){
   $(window).scroll(function(){
     if($(window).scrollTop() > 100) {
       $('#scroll_top').show();
@@ -36,7 +44,8 @@ $(function(){
     $('html, body').animate({scrollTop: 0}, 600);
     return false;
   });
-});
+});*/
+
 // swiper slide
 var mySwiper = new Swiper ('.swiper-container', {
   loop: true,
