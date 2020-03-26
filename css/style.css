@@ -333,6 +333,7 @@ template {
   opacity: 1; }
 
 .button {
+  outline: none;
   padding: 11px 24px;
   border: none;
   border-radius: 2px;
@@ -340,18 +341,22 @@ template {
   font-size: 0.93rem; }
 
 .button:hover {
+  outline: none;
   cursor: pointer; }
 
 .button--primary {
+  outline: none;
   background-color: #E3B873;
   color: #fff;
   box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
   transition: box-shadow 0.3s; }
 
 .button--primary:hover {
+  outline: none;
   box-shadow: none; }
 
 .button--outline {
+  outline: none;
   border: 1px solid #fff;
   background-color: transparent;
   color: #fff; }
@@ -363,6 +368,7 @@ template {
   color: rgba(255, 255, 255, 0.5); }
 
 .input {
+  outline: none;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
@@ -410,10 +416,9 @@ template {
   justify-content: center; }
 
 label.invalid {
-  color: tomato; }
-
-input.invalid {
-  border-bottom: 1px solid tomato; }
+  position: absolute;
+  color: tomato;
+  margin-top: 3rem; }
 
 .container {
   width: 85%;
@@ -543,6 +548,9 @@ button {
 
 .contacts__phone {
   margin-right: 45px; }
+
+.contacts__phone--footer {
+  text-decoration: none; }
 
 .hero {
   position: relative;
@@ -759,6 +767,7 @@ button {
   margin: auto; }
 
 .control__input-group {
+  outline: none;
   display: flex;
   flex-direction: column;
   flex-basis: 30%; }
@@ -767,6 +776,7 @@ button {
   margin-bottom: -7px; }
 
 .control__button {
+  outline: none;
   padding: 1.285rem 4.785rem; }
 
 .control__policy {
@@ -779,6 +789,7 @@ button {
   flex-wrap: wrap; }
 
 .control__input {
+  outline: none;
   color: #131313; }
 
 .video__play {
@@ -913,6 +924,7 @@ button {
   margin: auto; }
 
 .footer__input {
+  outline: none;
   padding-top: 0.1rem; }
 
 .footer__input-group {
@@ -930,6 +942,7 @@ button {
   margin-bottom: 3.7rem; }
 
 .footer__button {
+  outline: none;
   margin: auto;
   padding: 1.285rem 4.785rem; }
 
@@ -1045,6 +1058,7 @@ button {
   color: #fff; }
 
 .modal__close {
+  outline: none;
   position: absolute;
   right: 0;
   top: 0;
@@ -1067,6 +1081,9 @@ button {
   display: flex;
   flex-direction: column; }
 
+.modal__input {
+  outline: none; }
+
 .modal__input-group {
   display: flex;
   flex-direction: column;
@@ -1079,6 +1096,7 @@ button {
   margin-bottom: 2.7rem; }
 
 .modal__button {
+  outline: none;
   align-self: flex-end; }
 
 @media screen and (max-width: 1300px) {
