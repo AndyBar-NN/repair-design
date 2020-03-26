@@ -319,7 +319,6 @@ template {
   display: none; }
 
 #scroll_top {
-  display: none;
   position: fixed;
   bottom: 60px;
   right: 15px;
