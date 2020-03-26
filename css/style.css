@@ -333,7 +333,6 @@ template {
   opacity: 1; }
 
 .button {
-  outline: none;
   padding: 11px 24px;
   border: none;
   border-radius: 2px;
@@ -364,7 +363,6 @@ template {
   color: rgba(255, 255, 255, 0.5); }
 
 .input {
-  outline: none;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
@@ -448,6 +446,12 @@ body {
 
 img {
   max-width: 100%; }
+
+input {
+  outline: none; }
+
+button {
+  outline: none; }
 
 .section--dark {
   padding-top: 9.14rem;
