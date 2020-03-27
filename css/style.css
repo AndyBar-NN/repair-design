@@ -367,7 +367,8 @@ template {
   box-shadow: none; }
 
 .label {
-  font-size: 1.07rem; }
+  font-size: 1.07rem;
+  margin-bottom: 0.3rem; }
 
 .label--light {
   color: rgba(255, 255, 255, 0.5); }
@@ -548,7 +549,8 @@ button {
 .logo {
   font-size: 1.075rem;
   color: #E3B873;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-decoration: none; }
 
 .nav__item {
   color: #fff;
@@ -799,7 +801,7 @@ button {
   flex-basis: 30%; }
 
 .control__label {
-  margin-bottom: -7px; }
+  margin-bottom: -3px; }
 
 .control__button {
   outline: none;
