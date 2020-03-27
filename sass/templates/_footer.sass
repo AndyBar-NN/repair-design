@@ -65,8 +65,19 @@
   &__icon
     &
       max-width: 100%
+      box-shadow: 0px 5px 15px rgba($primary, 0.3)
+      transition: box-shadow 0.3s
+      border-radius: 1000px
+    &:hover
+      box-shadow: none
     &--mail
-      margin-right: 1rem
+      &
+        margin-right: 1rem
+        box-shadow: 0px 5px 15px rgba($primary, 0.3)
+        transition: box-shadow 0.3s
+        border-radius: 100px
+      &:hover
+        box-shadow: none
   &__contacts
     &
       position: relative
