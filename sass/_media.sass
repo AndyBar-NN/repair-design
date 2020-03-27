@@ -9,6 +9,8 @@
       &__item
         margin-right: 1rem
 @media screen and (max-width: 992px)
+  html
+    font-size: 12px
   .container
     width: 90%
   .nav
@@ -21,18 +23,20 @@
     &
       outline: none
       padding: 17px 24px
+      font-size: 1.08rem
   .hero
     &
       &__scroll-down
         display: none
       &__content
-        max-width: 22.86rem
+        max-width: 26.7rem
         margin-left: 0
-        margin-bottom: 5rem
+        margin-bottom: 8.08rem
+        padding-top: 11rem
       &__text
-        font-size: 1.29rem
+        font-size: 1.5rem
         margin-bottom: 2.5rem
-        line-height: 1.8rem
+        line-height: 135.84%
       &__instagram
         display: none
       &__button
@@ -45,13 +49,13 @@
       padding-top: 0
     &-title
       &__text
-        font-size: 1rem
+        font-size: 1.16rem
       &__heading
         &
           font-size: 1.6rem
       &__headings
         &
-          font-size: 1.6rem
+          font-size: 1.83rem
       &__word
         &::after
           display: none
@@ -69,11 +73,13 @@
   .swiper
     &-slide
       &__heading
-        font-size: 1rem
+        font-size: 1.16rem
       &__text
         margin-bottom: 1.5rem
+        flex-basis: 50%
       &__texts
         margin-bottom: 4.3rem
+        flex-basis: 50%
   .projects
     &
       padding-bottom: 27.4rem
@@ -82,8 +88,8 @@
       &__text
         &
           margin-bottom: 0
-          font-size: 1.2rem
-          line-height: 2rem
+          font-size: 1.16rem
+          line-height: 169.8%
         &::before
           margin-bottom: 1rem
       &__video
@@ -91,10 +97,13 @@
         margin-bottom: 2rem
       &__form
         flex-direction: column
+        max-width: 28.33rem
       &__label
         margin-top: 4.5rem
+        font-size: 1.25rem
       &__input
         margin-top: 0.4rem
+        font-size: 1.5rem
       &__button
         min-width: 100%
         order: 2
@@ -104,6 +113,8 @@
           order: 1
         &-label
           justify-content: flex-start
+          font-size: 1.33rem
+          margin-right: 0
   .contacts
     &
       &__phone
@@ -116,7 +127,7 @@
       &__button
         display: none
   .title
-    font-size: 1.64rem
+    font-size: 1.91rem
   .types
     &
       &__card
@@ -126,8 +137,14 @@
           margin-top: 4.14rem
   .card
     &
+      &__title
+        font-size: 1.25rem
       &__text
         margin-left: 0
+      &__list
+        font-size: 1.08rem
+      &__pricetag
+        font-size: 1.25rem
   .video
     &
       &__play
@@ -135,9 +152,11 @@
   .design
     &
       padding-bottom: 21rem
+    &__pricetag
+      font-size: 1.25rem
     &__section
       &-description
-        font-size: 1rem
+        font-size: 1.25rem
         padding-bottom: 32px
       &-title
         margin-top: 1rem
@@ -147,9 +166,12 @@
         display: none
       &__title
         margin-bottom: -1rem
+        font-size: 1.66rem
       &__form
         display: block
       &__input
+        &
+          font-size: 1.5rem
         &-group
           margin-top: 5rem
       &__policy
@@ -162,19 +184,28 @@
       &__container
         display: flex
         flex-direction: column-reverse
+      &__icons
+        width: auto
       &__contacts
         &
           margin-top: -2rem
         &--title
-          max-width: 25rem
+          max-width: 27rem
+          font-size: 1.5rem
+          line-height: 138.6%
       &__map
         height: 24.214rem
         padding-bottom: 4rem
         margin-bottom: 0
+  .label
+    &--light
+      font-size: 1.25rem
   .policy
     &__label
       &--center
         justify-content: flex-start
+        margin-right: 0
+        font-size: 1.33rem
   .animated
     &
       transition-property: none !important

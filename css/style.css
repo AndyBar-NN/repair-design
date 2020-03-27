@@ -967,6 +967,18 @@ button {
   background-color: #131313;
   padding: 3.5rem 0; }
 
+.footer__icons {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.55rem;
+  width: 5rem; }
+
+.footer__icon {
+  max-width: 100%; }
+
+.footer__icon--mail {
+  margin-right: 1rem; }
+
 .footer__contacts {
   position: relative;
   display: flex;
@@ -984,14 +996,6 @@ button {
   max-width: 35rem;
   margin: auto;
   margin-bottom: 1.642rem; }
-
-.footer__contacts--icons {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2.55rem; }
-
-.footer__contacts--icon {
-  margin-right: 1rem; }
 
 .footer__map {
   width: 925px;
@@ -1130,6 +1134,8 @@ button {
     margin-right: 1rem; } }
 
 @media screen and (max-width: 992px) {
+  html {
+    font-size: 12px; }
   .container {
     width: 90%; }
   .nav {
@@ -1140,17 +1146,19 @@ button {
     font-size: 1rem; }
   .button {
     outline: none;
-    padding: 17px 24px; }
+    padding: 17px 24px;
+    font-size: 1.08rem; }
   .hero__scroll-down {
     display: none; }
   .hero__content {
-    max-width: 22.86rem;
+    max-width: 26.7rem;
     margin-left: 0;
-    margin-bottom: 5rem; }
+    margin-bottom: 8.08rem;
+    padding-top: 11rem; }
   .hero__text {
-    font-size: 1.29rem;
+    font-size: 1.5rem;
     margin-bottom: 2.5rem;
-    line-height: 1.8rem; }
+    line-height: 135.84%; }
   .hero__instagram {
     display: none; }
   .hero__button {
@@ -1161,11 +1169,11 @@ button {
   .section--dark {
     padding-top: 0; }
   .section-title__text {
-    font-size: 1rem; }
+    font-size: 1.16rem; }
   .section-title__heading {
     font-size: 1.6rem; }
   .section-title__headings {
-    font-size: 1.6rem; }
+    font-size: 1.83rem; }
   .section-title__word::after {
     display: none; }
   .row {
@@ -1180,28 +1188,33 @@ button {
     margin-top: 3rem;
     min-width: 100%; }
   .swiper-slide__heading {
-    font-size: 1rem; }
+    font-size: 1.16rem; }
   .swiper-slide__text {
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem;
+    flex-basis: 50%; }
   .swiper-slide__texts {
-    margin-bottom: 4.3rem; }
+    margin-bottom: 4.3rem;
+    flex-basis: 50%; }
   .projects {
     padding-bottom: 27.4rem; }
   .control__text {
     margin-bottom: 0;
-    font-size: 1.2rem;
-    line-height: 2rem; }
+    font-size: 1.16rem;
+    line-height: 169.8%; }
   .control__text::before {
     margin-bottom: 1rem; }
   .control__video {
     min-height: 20rem;
     margin-bottom: 2rem; }
   .control__form {
-    flex-direction: column; }
+    flex-direction: column;
+    max-width: 28.33rem; }
   .control__label {
-    margin-top: 4.5rem; }
+    margin-top: 4.5rem;
+    font-size: 1.25rem; }
   .control__input {
-    margin-top: 0.4rem; }
+    margin-top: 0.4rem;
+    font-size: 1.5rem; }
   .control__button {
     min-width: 100%;
     order: 2;
@@ -1209,7 +1222,9 @@ button {
   .control__policy {
     order: 1; }
   .control__policy-label {
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    font-size: 1.33rem;
+    margin-right: 0; }
   .contacts__phone {
     margin-right: 0;
     color: #fff;
@@ -1219,28 +1234,39 @@ button {
   .contacts__button {
     display: none; }
   .title {
-    font-size: 1.64rem; }
+    font-size: 1.91rem; }
   .types__card {
     margin-bottom: 5rem; }
   .types__section-title {
     margin-top: 4.14rem; }
+  .card__title {
+    font-size: 1.25rem; }
   .card__text {
     margin-left: 0; }
+  .card__list {
+    font-size: 1.08rem; }
+  .card__pricetag {
+    font-size: 1.25rem; }
   .video__play {
     width: 7rem; }
   .design {
     padding-bottom: 21rem; }
+  .design__pricetag {
+    font-size: 1.25rem; }
   .design__section-description {
-    font-size: 1rem;
+    font-size: 1.25rem;
     padding-bottom: 32px; }
   .design__section-title {
     margin-top: 1rem; }
   .footer__menu {
     display: none; }
   .footer__title {
-    margin-bottom: -1rem; }
+    margin-bottom: -1rem;
+    font-size: 1.66rem; }
   .footer__form {
     display: block; }
+  .footer__input {
+    font-size: 1.5rem; }
   .footer__input-group {
     margin-top: 5rem; }
   .footer__policy {
@@ -1253,16 +1279,24 @@ button {
   .footer__container {
     display: flex;
     flex-direction: column-reverse; }
+  .footer__icons {
+    width: auto; }
   .footer__contacts {
     margin-top: -2rem; }
   .footer__contacts--title {
-    max-width: 25rem; }
+    max-width: 27rem;
+    font-size: 1.5rem;
+    line-height: 138.6%; }
   .footer__map {
     height: 24.214rem;
     padding-bottom: 4rem;
     margin-bottom: 0; }
+  .label--light {
+    font-size: 1.25rem; }
   .policy__label--center {
-    justify-content: flex-start; }
+    justify-content: flex-start;
+    margin-right: 0;
+    font-size: 1.33rem; }
   .animated {
     transition-property: none !important;
     transform: none !important;
