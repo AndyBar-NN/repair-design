@@ -1,25 +1,25 @@
 $(document).ready(function (){
 var modal = $('.modal'),
-modalBtn = $('[data-toggle=modal]'),
-closeBtn = $('.modal__close');
-modalBtn.on('click', function () {
-  modal.toggleClass('modal--visible');
-});
-closeBtn.on('click', function () {
-  modal.toggleClass('modal--visible');
-});
+  modalBtn = $('[data-toggle=modal]'),
+  closeBtn = $('.modal__close');
+  modalBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
+  closeBtn.on('click', function () {
+    modal.toggleClass('modal--visible');
+  });
 });
 
 $(document).ready(function (){
-var feedback = $('.feedback'),
-feedbackBtn = $('[data-toggle=feedback]'),
-closeBtn = $('.feedback__close');
-feedbackBtn.on('click', function () {
-  feedback.toggleClass('feedback--visible');
-});
-closeBtn.on('click', function () {
-  feedback.toggleClass('feedback--visible');
-});
+  var feedback = $('.feedback'),
+  feedbackBtn = $('[data-toggle=feedback]'),
+  closeBtn = $('.feedback__close');
+  feedbackBtn.on('click', function () {
+    feedback.toggleClass('feedback--visible');
+  });
+  closeBtn.on('click', function () {
+    feedback.toggleClass('feedback--visible');
+  });
 });
 
 //Smooth Scrolling Using Navigation Menu
@@ -110,8 +110,9 @@ $('.modal__form').validate({
       data: $(form).serialize(),
       success: function(response) {
         $(form)[0].reset();
+        $('.modal--visible').fadeOut();
         $('.feedback').fadeIn();
-        feedback.toggleClass('feedback--visible');
+        $('.feedback').css('display', 'flex');
       },
       error: function(response) {
         console.error('Ошибка запроса' + response);

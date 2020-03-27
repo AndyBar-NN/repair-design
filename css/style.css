@@ -1088,10 +1088,11 @@ button {
 .modal__title {
   font-family: 'Yeseva One', cursive;
   font-size: 1.357rem;
+  line-height: 1.85rem;
   font-weight: normal;
   text-align: center;
   margin: 0;
-  margin-bottom: 2.428rem; }
+  margin-bottom: 2.05rem; }
 
 .modal__form {
   display: flex;
@@ -1100,20 +1101,23 @@ button {
 .modal__input {
   outline: none; }
 
+.modal__input-groups {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0; }
+
 .modal__input-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 3.428rem; }
-
-.modal__input:last-of-type {
-  margin-bottom: 1rem; }
+  margin-bottom: 3.3rem; }
 
 .modal__policy {
   margin-bottom: 2.7rem; }
 
 .modal__button {
   outline: none;
-  align-self: flex-end; }
+  align-self: flex-end;
+  padding: 17px 49px; }
 
 @media screen and (max-width: 1300px) {
   html {
