@@ -111,8 +111,7 @@ $('.modal__form').validate({
       success: function(response) {
         $(form)[0].reset();
         $('.feedback').fadeIn();
-        $('.feedback').css('display', 'flex');
-        $('.modal--visible').fadeOut();
+        feedback.toggleClass('feedback--visible');
       },
       error: function(response) {
         console.error('Ошибка запроса' + response);
@@ -217,11 +216,11 @@ $('.footer__form').validate({
   $('[type=tel]').mask('+7(000)000-00-00', {placeholder: "+7(___)___-__-__"});
 
   // optimization map
-  var design = $('.design');
-  var designTop = design.offset().top;
+  var types = $('.types');
+  var typesTop = types.offset().top;
   $(window).bind('scroll', function() {
     var windowTop = $(this).scrollTop();
-    if (windowTop > designTop) {
+    if (windowTop > typesTop) {
       $('#map').html('<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae49485fa0dbfb794f69c708529616b63e03097c512501bf362f9b342eca14204&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>');
       $(window).unbind('scroll')
     };
