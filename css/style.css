@@ -348,7 +348,7 @@ template {
   outline: none;
   background-color: #E3B873;
   color: #fff;
-  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+  box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
   transition: box-shadow 0.3s; }
 
 .button--primary:hover {
@@ -359,7 +359,12 @@ template {
   outline: none;
   border: 1px solid #fff;
   background-color: transparent;
-  color: #fff; }
+  color: #fff;
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s; }
+
+.button--outline:hover {
+  box-shadow: none; }
 
 .label {
   font-size: 1.07rem; }
