@@ -27,6 +27,8 @@
       outline: none
       padding: 19px 24px
       font-size: 1.08rem
+      box-shadow: none
+      transition: none
   .hero
     &
       &__scroll-down
@@ -113,6 +115,8 @@
         min-width: 100%
         order: 2
         margin-top: 4.459rem
+        box-shadow: none
+        transition: none
       &__policy
         &
           order: 1
@@ -193,6 +197,9 @@
         flex-direction: column-reverse
       &__icons
         width: auto
+      &__icon
+        box-shadow: none
+        transition: none
       &__contacts
         &
           margin-top: -2rem
@@ -218,6 +225,24 @@
       transition-property: none !important
       transform: none !important
       animation: none !important
+@media screen and (max-height: 420px)
+  .modal__input-group
+    margin-bottom: 1.5rem
+  .label--light
+    margin-bottom: 0
+  .modal__title
+    margin-bottom: 0
+  .modal__input
+    margin-bottom: 0
+  .modal__policy
+    margin-bottom: 0.7rem
+  .button
+    padding: 10px 24px
+  label
+    &.invalid
+      position: absolute
+      color: tomato
+      margin-top: 3.5rem
 @media screen and (max-height: 520px)
   .hero
     &

@@ -322,7 +322,7 @@ template {
   position: fixed;
   bottom: 60px;
   right: 15px;
-  z-index: 1;
+  z-index: 10;
   width: 32px;
   height: 32px;
   background: url("../img/arrow.svg") 50% 50% no-repeat;
@@ -425,7 +425,7 @@ template {
 label.invalid {
   position: absolute;
   color: tomato;
-  margin-top: 3rem; }
+  margin-top: 3.9rem; }
 
 .container {
   width: 85%;
@@ -572,6 +572,7 @@ button {
   color: #fff; }
 
 .contacts__phone--footer {
+  color: #E3B873;
   text-decoration: none; }
 
 .contacts__phone--footer:hover {
@@ -579,7 +580,7 @@ button {
 
 .hero {
   position: relative;
-  z-index: 9;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -824,7 +825,8 @@ button {
 
 .video__play {
   position: relative;
-  margin: auto; }
+  margin: auto;
+  cursor: pointer; }
 
 .types__section-title {
   margin-top: 10.5rem;
@@ -1180,7 +1182,9 @@ button {
   .button {
     outline: none;
     padding: 19px 24px;
-    font-size: 1.08rem; }
+    font-size: 1.08rem;
+    box-shadow: none;
+    transition: none; }
   .hero__scroll-down {
     display: none; }
   .hero__content {
@@ -1253,7 +1257,9 @@ button {
   .control__button {
     min-width: 100%;
     order: 2;
-    margin-top: 4.459rem; }
+    margin-top: 4.459rem;
+    box-shadow: none;
+    transition: none; }
   .control__policy {
     order: 1; }
   .control__policy-label {
@@ -1319,6 +1325,9 @@ button {
       flex-direction: column-reverse; }
     .footer__icons {
       width: auto; }
+    .footer__icon {
+      box-shadow: none;
+      transition: none; }
     .footer__contacts {
       margin-top: -2rem; }
     .footer__contacts--title {
@@ -1340,6 +1349,24 @@ button {
     transform: none !important;
     -webkit-animation: none !important;
     animation: none !important; } }
+
+@media screen and (max-height: 420px) {
+  .modal__input-group {
+    margin-bottom: 1.5rem; }
+  .label--light {
+    margin-bottom: 0; }
+  .modal__title {
+    margin-bottom: 0; }
+  .modal__input {
+    margin-bottom: 0; }
+  .modal__policy {
+    margin-bottom: 0.7rem; }
+  .button {
+    padding: 10px 24px; }
+  label.invalid {
+    position: absolute;
+    color: tomato;
+    margin-top: 3.5rem; } }
 
 @media screen and (max-height: 520px) {
   .hero {

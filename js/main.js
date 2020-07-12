@@ -30,6 +30,23 @@ $('a[href*="#"]').on('click', function(e){
   e.preventDefault();
 });
 
+$(document).ready(function() {
+ var scrollBtn = $('#scroll_top');
+ $(window).scroll (function () {
+   if ($(this).scrollTop () > 400) {
+     scrollBtn.fadeIn();
+   } else {
+     scrollBtn.fadeOut();
+   }
+});
+scrollBtn.on('click', function(){
+$('body, html').animate({
+scrollTop: 0
+}, 800);
+return false;
+});
+});
+
 // scroll down
 /*$(function(){
   $(window).scroll(function(){
@@ -226,3 +243,17 @@ $('.footer__form').validate({
       $(window).unbind('scroll')
     };
   });
+  /*var player;
+  $('.video__play').on('.click', function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '465',
+          width: '100%',
+          videoId: 'ftcGpb4NBNE',
+          events: {
+            'onReady': videoPlay,
+          }
+        });
+      })
+  function videoPlay(event) {
+    event.player.playVideo();
+  }*/
