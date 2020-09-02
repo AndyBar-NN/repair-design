@@ -80,5 +80,5 @@ function fonts(done) {
 //   done();
 // }
 
-exports.serve = bs;
+exports.load = bs;
 exports.build = series(buildCSS, buildJS, html, php, fonts, /*imagemin*/);
