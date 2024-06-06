@@ -30,38 +30,59 @@ $('a[href*="#"]').on('click', function(e){
   e.preventDefault();
 });
 
-$(document).ready(function() {
- var scrollBtn = $('#scroll_top');
- $(window).scroll (function () {
-   if ($(this).scrollTop () > 400) {
-     scrollBtn.fadeIn();
-   } else {
-     scrollBtn.fadeOut();
-   }
-});
-scrollBtn.on('click', function(){
-$('body, html').animate({
-scrollTop: 0
-}, 800);
-return false;
-});
-});
-
-// scroll down
-/*$(function(){
-  $(window).scroll(function(){
-    if($(window).scrollTop() > 100) {
-      $('#scroll_top').show();
-    } else {
-      $('#scroll_top').hide();
+const btnUp = {
+  el: document.querySelector('.btn-up'),
+  scrolling: false,
+  show() {
+    if (this.el.classList.contains('btn-up_hide') && !this.el.classList.contains('btn-up_hiding')) {
+      this.el.classList.remove('btn-up_hide');
+      this.el.classList.add('btn-up_hiding');
+      window.setTimeout(() => {
+        this.el.classList.remove('btn-up_hiding');
+      }, 300);
     }
-  });
+  },
+  hide() {
+    if (!this.el.classList.contains('btn-up_hide') && !this.el.classList.contains('btn-up_hiding')) {
+      this.el.classList.add('btn-up_hiding');
+      window.setTimeout(() => {
+        this.el.classList.add('btn-up_hide');
+        this.el.classList.remove('btn-up_hiding');
+      }, 300);
+    }
+  },
+  addEventListener() {
+    // при прокрутке окна (window)
+    window.addEventListener('scroll', () => {
+      const scrollY = window.scrollY || document.documentElement.scrollTop;
+      if (this.scrolling && scrollY > 0) {
+        return;
+      }
+      this.scrolling = false;
+      // если пользователь прокрутил страницу более чем на 200px
+      if (scrollY > 400) {
+        // сделаем кнопку .btn-up видимой
+        this.show();
+      } else {
+        // иначе скроем кнопку .btn-up
+        this.hide();
+      }
+    });
+    // при нажатии на кнопку .btn-up
+    document.querySelector('.btn-up').onclick = () => {
+      this.scrolling = true;
+      this.hide();
+      // переместиться в верхнюю часть страницы
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  }
+}
 
-  $('#scroll_top').click(function(){
-    $('html, body').animate({scrollTop: 0}, 600);
-    return false;
-  });
-});*/
+btnUp.addEventListener();
 
 // swiper slide
 var mySwiper = new Swiper ('.swiper-container', {
